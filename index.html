@@ -59,8 +59,6 @@
 	 <header>
 		<h2>A JavaScript project by JR Fernandez</h2>
 		<h3 id="my-greeting">Greeting</h3>
-		<h3>Today is<div id="my-day"></h3>
-
 	</header>
 	<p>This webpage was created by JR Fernandez for an Assignment called Time of Day.</p>
 	<p>This web page uses JavaScript to determine the current hour, and presents a different image, custom message, and color based on each of the following times of day:</p>
@@ -103,31 +101,31 @@
 	let myGreeting = "";
 	let myColor = "";
 	let myPic = "";
-	let myDay = myDate.getDate();
+	let dayoftheWeekName = new Date().toLocaleString ("default",{weekday: "long"});
 
 	//DATA FOR TESTING - REMOVE NEXT LINE!//
 
 	if(myHour >= 12 && myHour < 18){
 		//alert("Good afternoon!");
-		myGreeting = "Good Afternoon!";
+		myGreeting = "Good Afternoon! Today is " + dayoftheWeekName;
 		myColor = "green";
 		myPic = "afternoon.jpg";
 
 	} else if (myHour >= 5 && myHour < 12){
 		//alert("Good morning!");
-		myGreeting = "Good Morning!";
+		myGreeting = "Good Morning! Today is " + dayoftheWeekName;
 		myColor = "orange";
 		myPic = "morning.jpg";
 
 	} else if (myHour >=18 && myHour < 23){
 		//alert("Good Evening!");
-		myGreeting = "Good Evening!";
+		myGreeting = "Good Evening! Today is " + dayoftheWeekName;
 		myColor = "red";
 		myPic = "evening.jpg";
 
 	} else if (myHour >=23 || myHour < 5){
 		//alert("Good Night!");
-		myGreeting = "Good Night!";
+		myGreeting = "Good Night! Today is " + dayoftheWeekName;
 		myColor = "purple";
 		myPic = "night.jpg";
 	
@@ -149,7 +147,6 @@
 	let d = new Date(); let thisYear = d.getFullYear();
     document.getElementById("this-year").innerHTML = thisYear;
 
-	document.getElementById("my-day").innerHTML = myDate;
 	
  
  
