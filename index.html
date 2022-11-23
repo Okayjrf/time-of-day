@@ -57,8 +57,10 @@
 	</header>
     <main>
 	 <header>
-		<h3>A JavaScript project by JR Fernandez</h3>
+		<h2>A JavaScript project by JR Fernandez</h2>
 		<h3 id="my-greeting">Greeting</h3>
+		<h3>Today is<div id="my-day"></h3>
+
 	</header>
 	<p>This webpage was created by JR Fernandez for an Assignment called Time of Day.</p>
 	<p>This web page uses JavaScript to determine the current hour, and presents a different image, custom message, and color based on each of the following times of day:</p>
@@ -101,6 +103,7 @@
 	let myGreeting = "";
 	let myColor = "";
 	let myPic = "";
+	let myDay = myDate.getDate();
 
 	//DATA FOR TESTING - REMOVE NEXT LINE!//
 
@@ -145,6 +148,9 @@
 	//set current year in span with id of this-year
 	let d = new Date(); let thisYear = d.getFullYear();
     document.getElementById("this-year").innerHTML = thisYear;
+
+	document.getElementById("my-day").innerHTML = myDate;
+	
  
  
  </script
